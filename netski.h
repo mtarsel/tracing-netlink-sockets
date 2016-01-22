@@ -3,8 +3,6 @@
 
 DONT FORGET TO ENABLE YOUR TRACEPOINTS
 =====================================
-make all
-insmod netski-kern.ko
 echo 1 > /sys/kernel/debug/tracing/events/netski/enable
 echo 1 > /sys/kernel/debug/tracing/events/netski/netski/enable
 
@@ -15,8 +13,6 @@ TO SEE YOUR RESULTS:
 cat /sys/kernel/debug/tracing/trace | grep netski
 dmesg will show the PID you're looking for
 
-
-
 This program creates a tracepoint called netski. It is a good idea to name the
 header file and the tracepoint the same. You HAVE to name them the same if you
 are not going to include the header in the default location include/trace/events
@@ -26,9 +22,7 @@ this code http://lwn.net/Articles/383362/
 
 For more of an intro about Tracepoints and to understand why the struct is
 defined in such a way, then read the first article of the LWN Tutorial
-http://lwn.net/Articles/379903/
-
-*/
+http://lwn.net/Articles/379903/ */
 
 #undef TRACE_SYSTEM
 #define TRACE_SYSTEM netski
@@ -41,7 +35,7 @@ http://lwn.net/Articles/379903/
 
 
 /*
- * Tracepoint for free an sk_buff:
+ * Tracepoint for netski kernel module:
  */
 TRACE_EVENT(netski,
 
