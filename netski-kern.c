@@ -36,7 +36,7 @@ my output went to /var/log/syslog and dmesg
 #include <linux/netlink.h>
 #include <linux/skbuff.h>
 
-#define DRIVER_AUTHOR "Mick Tarsel <mjtarsel@us.ibm.com>"
+#define DRIVER_AUTHOR "Mick Tarsel <mtarsel@ibm.co>"
 #define DRIVER_DESC "A basic module to learn more about netlink sockets."
 
 /*you could use existing netlink socket protocol types, instead I add my own
